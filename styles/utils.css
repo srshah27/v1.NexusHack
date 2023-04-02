@@ -8,11 +8,69 @@
   border-radius: 0.375rem;
   box-shadow: 0 10px 20px rgba(255, 29, 72, 0.5),
     0 6px 6px rgba(255, 29, 72, 0.5), 0 0 100px -10px var(--clr-rose);
-  transition: transform 0.3s, box-shadow 0.3s;  
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.btn:hover{
-    transform: translateY(-3px);
-    box-shadow: 0 14px 28px rgba(255, 29, 72, 0.25),
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(255, 29, 72, 0.25),
     0 10px 10px rgba(255, 29, 72, 0.22), 0 0 120px -10px var(--clr-rose);
+}
+
+
+/* 6 levels of media queries starting from xs to 2xl 
+  475 640 768 1024 1280 1536 pixels*/
+
+/* mobile first approach  */
+
+.section {
+  margin-top: 5rem;
+}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid red;
+}
+
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+  .section {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }

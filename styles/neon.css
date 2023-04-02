@@ -14,6 +14,25 @@
 
   /* rose rgb(255, 29, 72) */
   /* rose rgb(79, 70, 288) */
+
+  /* sizes */
+  /* 15 size from xxs to 10xl in css variables */
+
+  --size-xxs: 0.5rem;
+  --size-xs: 0.75rem;
+  --size-sm: 0.875rem;
+  --size-md: 1rem;
+  --size-lg: 1.125rem;
+  --size-xl: 1.25rem;
+  --size-2xl: 1.5rem;
+  --size-3xl: 1.875rem;
+  --size-4xl: 2.25rem;
+  --size-5xl: 3rem;
+  --size-6xl: 3.75rem;
+  --size-7xl: 4.5rem;
+  --size-8xl: 6rem;
+  --size-9xl: 8rem;
+  --size-10xl: 10rem;
 }
 
 html {
@@ -34,7 +53,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
-  background-size: cover; 
+  background-size: cover;
   filter: blur(4px);
   position: absolute;
   top: 0;
