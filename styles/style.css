@@ -1,14 +1,7 @@
-body,
-html {
-  height: 100%;
-}
 
-body {
-  height: 100%;
-  background-color: #191919;
-}
 
 #blackhole {
+  margin-top: 90px;
   height: 100%;
   width: 100%;
   position: relative;
@@ -72,10 +65,14 @@ body {
   transition: all 500ms;
 }
 
-canvas {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  margin: auto;
+.heading {
+  position: absolute;
+  left: 50%;
+  width: 255px;
+  height: 255px;
+  background-color: white;
+  z-index: 50;
+  text-align: center;
+  margin-left: -128px;
+  margin-top: 128px;
 }
