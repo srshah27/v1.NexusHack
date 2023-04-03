@@ -1,3 +1,9 @@
+/* @import "/public/webfont/Rexton-Bold.woff"; */
+@font-face {
+  font-family: myfont;
+  src: url(/public/webfont/Rexton-Bold.woff);
+}
+
 * {
   margin: 0;
   line-height: calc(1em + 0.5rem);
@@ -40,7 +46,7 @@ html {
 }
 
 body {
-  font-family: "General Sans";
+  font-family: "myfont";
   height: calc(100vh - 90px);
   background-color: var(--clr-dark);
   color: var(--clr-light);
