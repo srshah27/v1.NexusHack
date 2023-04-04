@@ -1,7 +1,7 @@
 /* @import "/public/webfont/Rexton-Bold.woff"; */
 @font-face {
   font-family: myfont;
-  src: url(/public/webfont/Rexton-Bold.woff);
+  src: url(/webfont/Rexton-Bold.woff);
 }
 
 * {
@@ -17,6 +17,13 @@
   --clr-slate800: #1e293b;
   --clr-rose: #e11d48;
   --clr-indigo: #4f46e5;
+
+
+
+
+  --purple: rgb(123, 31, 162);
+  --violet: rgb(103, 58, 183);
+  --pink: rgb(244, 143, 177);
 
   /* rose rgb(255, 29, 72) */
   /* rose rgb(79, 70, 288) */
@@ -46,10 +53,11 @@ html {
 }
 
 body {
-  font-family: "myfont";
-  height: calc(100vh - 90px);
+  font-family: "General Sans", sans-serif;
+  /* height: calc(100vh - 90px); */
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  overflow-x: hidden;
 }
 
 .bg-image {
@@ -59,6 +67,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   /* background-attachment: fixed; */
+  position: fixed;
   background-size: cover;
   filter: blur(4px);
   position: absolute;

@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="bg-image"></div>
+    <div id="blob"></div>
+    <div id="blur"></div>
+    <!-- <div id="trailer"></div> -->
     <!-- bg image -->
-    <!-- <div class="bg-image"></div> -->
 
     <!-- hero content -->
     <header class="header container">
       <nav>
         <ul class="header__menu">
+          <li><a class="header__link" href="#home">Home</a></li>
           <li><a class="header__link" href="#about">About</a></li>
           <li><a class="header__link" href="#prizes">Prizes</a></li>
           <li><a class="header__link" href="#sponsors">Sponsors</a></li>
@@ -53,13 +61,13 @@
     <main>
       <section class="hero container">
         <img class="hero__img" src="/favicon.svg" alt="Nexus Logo" />
-        <h2 class="hero__subtitle">
+        <!-- <h2 class="hero__subtitle">
           Hack your way through infinite possibilities
-        </h2>
-        <h1 class="hero__title">NEXUS</h1>
-        <p class="hero__desc">
-          Are you ready for the multiverse of <strong>Hacking!</strong>
-        </p>
+        </h2> -->
+        <h1 class="hero__title">
+          <span data-value="NEXUS HACK" class="magic">NEXUS HACK</span>
+        </h1>
+        <p class="hero__desc">Hack your way through infinite possibilities</p>
         <a class="hero__btn btn" href="">JOIN US</a>
       </section>
 
@@ -370,7 +378,7 @@
       </section>
     </main>
     <footer class="footer container section">
-      <h3 class="footer__title">~ Snehil Shah ~</h3>
+      <h3 class="footer__title">~ Made by 💖 Snehil Shah ~</h3>
     </footer>
     <script type="module" src="./src/main.js"></script>
   </body>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
 .hero {
   text-align: center;
   display: flex;
@@ -21,11 +23,13 @@
 }
 
 .hero__title {
+  /* font-family: "myfont"; */
+  font-family: "Space Mono", monospace;
   color: var(--clr-rose);
   text-transform: uppercase;
-  font-size: var(--size-4xl);
-  letter-spacing: -0.05em;
-  line-height: 0.9;
+  font-size: var(--size-2xl);
+  /* letter-spacing: -0.2em; */
+  /* line-height: 0.9; */
 }
 
 .hero__description {
@@ -39,6 +43,60 @@
   font-size: var(--size-xxs);
   color: var(--clr-light);
 }
+
+/* additional effects */
+/* magic text */
+.magic {
+  animation: background-pan 3s linear infinite;
+  background: linear-gradient(
+    to right,
+    var(--clr-rose),
+    var(--clr-indigo),
+    mediumpurple,
+    var(--clr-rose)
+  );
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+/* trailer */
+#trailer {
+  height: 20px;
+  width: 20px;
+  background-color: var(--clr-rose);
+  border-radius: 20px;
+
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10000;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 500ms ease;
+
+  display: grid;
+  place-items: center;
+}
+
+body:hover > #trailer {
+  opacity: 0.5;
+}
+
+/* blob */
 
 /* xs */
 @media (min-width: 475px) {
@@ -77,8 +135,8 @@
 /* lg */
 @media (min-width: 1024px) {
   .hero__img {
-    width: 8rem;
-    height: 8rem;
+    width: 10rem;
+    height: 10rem;
   }
 
   .hero__subtitle {
@@ -96,6 +154,43 @@
   .hero__btn {
     font-size: var(--size-lg);
   }
+
+  @keyframes rotate {
+    from {
+      rotate: 0deg;
+    }
+
+    50% {
+      scale: 1 1.5;
+    }
+
+    to {
+      rotate: 360deg;
+    }
+  }
+
+  #blob {
+    background-color: white;
+    height: 20vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--clr-rose), var(--clr-indigo));
+    animation: rotate 20s infinite;
+    opacity: 0.8;
+    z-index: -5;
+  }
+
+  #blur {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: -5;
+    backdrop-filter: blur(12vmax);
+  }
 }
 
 /* xl */
@@ -105,8 +200,8 @@
   }
 
   .hero__img {
-    width: 10rem;
-    height: 10rem;
+    width: 12rem;
+    height: 12rem;
   }
 
   .hero__subtitle {
@@ -114,7 +209,7 @@
   }
 
   .hero__title {
-    font-size: var(--size-9xl);
+    font-size: var(--size-8xl);
   }
 
   .hero__description {
