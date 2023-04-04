@@ -54,6 +54,8 @@ html {
 
 body {
   font-family: "General Sans", sans-serif;
+  /* font-family: "Space Mono", monospace; */
+  /* letter-spacing: 0.2em; */
   /* height: calc(100vh - 90px); */
   background-color: var(--clr-dark);
   color: var(--clr-light);
@@ -116,3 +118,4 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--clr-rose);
   outline: 1px solid var(--clr-rose);
 }
+
