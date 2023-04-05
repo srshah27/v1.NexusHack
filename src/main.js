@@ -8,6 +8,7 @@ import "../styles/components/contact.css"
 import "../styles/components/footer.css"
 import "../styles/utils.css"
 import "../styles/components/stars.css"
+import "../styles/components/sponsor.css"
 import "../styles/components/timeline.css"
 
 // magic

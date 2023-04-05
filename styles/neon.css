@@ -18,9 +18,6 @@
   --clr-rose: #e11d48;
   --clr-indigo: #4f46e5;
 
-
-
-
   --purple: rgb(123, 31, 162);
   --violet: rgb(103, 58, 183);
   --pink: rgb(244, 143, 177);
@@ -60,6 +57,9 @@ body {
   background-color: var(--clr-dark);
   color: var(--clr-light);
   overflow-x: hidden;
+}
+
+.test {
 }
 
 .bg-image {
@@ -118,4 +118,3 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--clr-rose);
   outline: 1px solid var(--clr-rose);
 }
-
