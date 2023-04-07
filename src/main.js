@@ -10,6 +10,7 @@ import "../styles/components/footer.css"
 import "../styles/utils.css"
 import "../styles/components/stars.css"
 import "../styles/components/sponsor.css"
+import "../styles/components/faq.css"
 
 // magic
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
