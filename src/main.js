@@ -40,19 +40,19 @@ document.querySelector(".magic").onmouseover = (event) => {
 
 // trailer
 
-  // const trailer = document.getElementById("trailer")
+// const trailer = document.getElementById("trailer")
 
-  // window.onmousemove = (e) => {
-  //   const x = e.clientX - trailer.offsetWidth / 2,
-  //     y = e.clientY - trailer.offsetHeight / 2
-  //   const keyframes = {
-  //     transform: `translate(${x}px, ${y}px)`,
-  //   }
-  //   trailer.animate(keyframes, {
-  //     duration: 900,
-  //     fill: "forwards",
-  //   })
-  // }
+// window.onmousemove = (e) => {
+//   const x = e.clientX - trailer.offsetWidth / 2,
+//     y = e.clientY - trailer.offsetHeight / 2
+//   const keyframes = {
+//     transform: `translate(${x}px, ${y}px)`,
+//   }
+//   trailer.animate(keyframes, {
+//     duration: 900,
+//     fill: "forwards",
+//   })
+// }
 
 // const blob = document.getElementById("blob")
 
@@ -79,7 +79,7 @@ $(document).ready(function () {
   $(".star").each(function () {
     // var color = 'rgba('+ Math.floor(Math.random() * 255) +', ' + Math.floor(Math.random() * 255) + ', ' + Math.floor(Math.random() * 255) + ', '+ (1 - ((this.orbital) / 255)) +')';
     var cur = $(this)
-    
+
     var s = 0.2 + Math.random() * 1
     var curR = r + Math.random() * 300
     cur.css({
@@ -99,3 +99,11 @@ $(document).ready(function () {
     })
   })
 })
+
+const buttons = document.querySelectorAll(".faq-toggle");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () =>
+    button.parentElement.classList.toggle("active")
+  );
+});
