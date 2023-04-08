@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
 
 .hero {
   text-align: center;
@@ -30,6 +31,7 @@
 
 .hero__title {
   font-family: "myfont";
+  /* font-family: 'Ubuntu Mono', monospace; */
   color: var(--clr-rose);
   text-transform: uppercase;
   font-size: var(--size-2xl);
