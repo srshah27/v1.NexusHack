@@ -22,6 +22,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
+
   </head>
   <body>
     <!-- <div class="bg-image"></div> -->
@@ -104,22 +106,91 @@
           </p>
           <hr class="about__hr" />
           <h3 class="about__subtitle">Domains</h3>
-          <div class="about__list-container">
-            <ul class="about__list">
-              <li class="about__list__item">Web App</li>
-              <li class="about__list__item">AIML</li>
-              <li class="about__list__item">AR</li>
-            </ul>
-            <ul class="about__list">
-              <li class="about__list__item">Blockchain</li>
-              <li class="about__list__item">Multi Decipline Innovation</li>
-              <li class="about__list__item">Linear Regression</li>
-            </ul>
+          <div id="cards">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <div class="card-info-title">
+                      <h3>Apartments</h3>  
+                      <h4>Places to be apart. Wait, what?</h4>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fa-duotone fa-unicorn"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fa-duotone fa-unicorn"></i>
+                    <div class="card-info-title">
+                      <h3>Unicorns</h3>  
+                      <h4>A single corn. Er, I mean horn.</h4>
+                    </div>    
+                  </div>  
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fa-duotone fa-blender-phone"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fa-duotone fa-blender-phone"></i>
+                    <div class="card-info-title">
+                      <h3>Blender Phones</h3>  
+                      <h4>These absolutely deserve to exist.</h4>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fa-duotone fa-person-to-portal"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fa-duotone fa-person-to-portal"></i>
+                    <div class="card-info-title">
+                      <h3>Adios</h3>  
+                      <h4>See you...</h4>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-content">
+                <div class="card-image">
+                  <i class="fa-duotone fa-person-from-portal"></i>
+                </div>
+                <div class="card-info-wrapper">
+                  <div class="card-info">
+                    <i class="fa-duotone fa-person-from-portal"></i>
+                    <div class="card-info-title">
+                      <h3>I mean hello</h3>  
+                      <h4>...over here.</h4>
+                    </div>    
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+          
         </div>
-        <div class="about__image-wrapper">
+        <!-- <div class="about__image-wrapper">
           <img class="about__img" src="/duck.jpg" alt="windows" />
-        </div>
+        </div> -->
       </section>
 
       <section id="timeline">
@@ -267,67 +338,137 @@
 
       <section class="faq">
         <h1 class="magic__desc heading1">Frequently Asked Questions</h1>
-        <div class="faq-container">
-          <div class="faq">
-            <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
-            <p class="faq-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nobis, repellat neque non dicta fugiat veritatis sit delectus
-              perspiciatis quis?
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-
-          <div class="faq active">
-            <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
-            <p class="faq-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nobis, repellat neque non dicta fugiat veritatis sit delectus
-              perspiciatis quis?
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
-            <p class="faq-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nobis, repellat neque non dicta fugiat veritatis sit delectus
-              perspiciatis quis?
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
-            <p class="faq-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nobis, repellat neque non dicta fugiat veritatis sit delectus
-              perspiciatis quis?
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-
-          <div class="faq">
-            <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
-            <p class="faq-text">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
-              nobis, repellat neque non dicta fugiat veritatis sit delectus
-              perspiciatis quis?
-            </p>
-            <button class="faq-toggle">
-              <i class="fas fa-angle-down"></i>
-            </button>
-          </div>
-        </div>
+        <div>
+          <dl class="mt-8 mx-auto max-w-screen-sm lg:max-w-screen-lg flex flex-col lg:flex-row lg:flex-wrap">
+            <div class="lg:w-1/2">
+                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                    <dt class="question">
+                        <div class="flex justify-between">
+                            <div class="text-indigo-800 font-semibold">
+                            Do you accept Paypal?
+                            </div>
+                            <div>
+                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
+                        Yes, we do, along with AliPay, PayTM, and Payoneer.
+                    </dd>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                    <dt class="question">
+                        <div class="flex justify-between">
+                            <div class="text-indigo-800 font-semibold">
+                                What is your SLA Guarantee ?
+                            </div>
+                            <div>
+                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
+                        Yes, we do, along with AliPay, PayTM, and Payoneer.
+                    </dd>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                    <dt class="question">
+                        <div class="flex justify-between">
+                            <div class="text-indigo-800 font-semibold">
+                                Are there more Tailwind templates ?
+                            </div>
+                            <div>
+                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
+                        Yes, we do, along with AliPay, PayTM, and Payoneer.
+                    </dd>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
+                    <dt class="question">
+                        <div class="flex justify-between">
+                            <div class="text-indigo-800 font-semibold">
+                                Is this template free for commercial use ?
+                            </div>
+                            <div>
+                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
+                                    <g>
+                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
+                                    </g>
+                                    </g>
+                                </svg>
+                            </div>
+                        </div>
+                    </dt>
+                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
+                        Yes, we do, along with AliPay, PayTM, and Payoneer.
+                    </dd>
+                </div>
+            </div>
+        </dl>
+    </div>
+</div>
+</div>
+<script
+src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+crossorigin="anonymous"></script>
+</div>
       </section>
 
       <section id="contact" class="contact container section">

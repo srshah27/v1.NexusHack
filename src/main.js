@@ -11,6 +11,8 @@ import "../styles/utils.css"
 import "../styles/components/stars.css"
 import "../styles/components/sponsor.css"
 import "../styles/components/faq.css"
+import "../styles/components/domains.css"
+
 
 // magic
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
@@ -107,3 +109,21 @@ buttons.forEach((button) => {
     button.parentElement.classList.toggle("active")
   );
 });
+
+document.getElementById("cards").onmousemove = e => {
+  for(const card of document.getElementsByClassName("card")) {
+    const rect = card.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    card.style.setProperty("--mouse-x", `${x}px`);
+    card.style.setProperty("--mouse-y", `${y}px`);
+  };
+}
+
+
+
+$('.question-and-answer').click(function() {
+  $(this).find(".answer").toggleClass("hidden")
+  $(this).find(".question-chevron").toggleClass("hidden")
+})
