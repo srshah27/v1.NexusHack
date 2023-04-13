@@ -1,500 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <!-- <link
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <!-- <link
       href="https://api.fontshare.com/v2/css?f[]=general-sans@500,600,400,700&display=swap"
       rel="stylesheet"
     /> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <!-- <link
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
     /> -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/1.2.0/tailwind.min.css'>
 
-  </head>
-  <body>
-    <!-- <div class="bg-image"></div> -->
-    <!-- <div id="blob"></div> -->
-    <!-- <div id="blur"></div> -->
-    <div class="stars"></div>
-    <div id="trailer"></div>
+</head>
 
-    <!-- bg image -->
+<body>
+  <!-- <div class="bg-image"></div> -->
+  <!-- <div id="blob"></div> -->
+  <!-- <div id="blur"></div> -->
+  <!-- <div class="stars"></div> -->
+  <canvas id="bgCanvas"></canvas>
 
-    <!-- hero content -->
-    <header class="header container">
-      <nav>
-        <ul class="header__menu">
-          <li><a class="header__link" href="#home">Home</a></li>
-          <li><a class="header__link" href="#about">About</a></li>
-          <li><a class="header__link" href="#prizes">Prizes</a></li>
-          <li><a class="header__link" href="#sponsors">Sponsors</a></li>
-          <li>
-            <!-- <a class="header__join btn" href="#">JoinUs</a> -->
-          </li>
-        </ul>
-        <button class="header__bars">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
-              clip-rule="evenodd"
-            />
-          </svg>
-        </button>
-      </nav>
-    </header>
-    <main>
-      <section class="hero container">
-        <div class="avatar">
-          <img class="hero__img" src="/favicon.svg" alt="Nexus Logo" />
-        </div>
-        <!-- <h2 class="hero__subtitle">
+  <div id="trailer"></div>
+
+  <!-- bg image -->
+
+  <!-- hero content -->
+  <header class="header container">
+    <nav>
+      <ul class="header__menu">
+        <li><a class="header__link" href="#home">Home</a></li>
+        <li><a class="header__link" href="#about">About</a></li>
+        <li><a class="header__link" href="#prizes">Prizes</a></li>
+        <li><a class="header__link" href="#sponsors">Sponsors</a></li>
+        <li>
+          <!-- <a class="header__join btn" href="#">JoinUs</a> -->
+        </li>
+      </ul>
+      <button class="header__bars">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+          <path fill-rule="evenodd"
+            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+            clip-rule="evenodd" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="hero container">
+      <div class="avatar">
+        <img class="hero__img" src="/favicon.svg" alt="Nexus Logo" />
+      </div>
+      <!-- <h2 class="hero__subtitle">
           Hack your way through infinite possibilities
         </h2> -->
-        <h1 class="hero__title">
-          <span data-value="NEXUS HACK" class="magic">NEXUS HACK</span>
-        </h1>
-        <p class="hero__subtitle">
-          <span class="magic__desc"
-            >Hack your way through infinite possibilities</span
-          >
-        </p>
-        <a class="hero__btn btn" href="">JOIN US</a>
-      </section>
+      <h1 class="hero__title">
+        <span data-value="NEXUS HACK" class="magic">NEXUS HACK</span>
+      </h1>
+      <p class="hero__subtitle">
+        <span class="magic__desc">Hack your way through infinite possibilities</span>
+      </p>
+      <a class="hero__btn btn" href="">JOIN US</a>
+    </section>
 
-      <!-- about section starts here -->
-      <section class="container about section">
-        <div class="about__content">
-          <h2 class="about__title">About</h2>
-          <p class="about__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-            dolorum sint <strong>asperiores velit</strong>! Ut nesciunt soluta,
-            similique doloremque ab aliquam asperiores officiis exercitationem
-            aut consectetur impedit cupiditate dicta, neque suscipit.
-          </p>
-          <p class="about__desc">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-            tempore rerum, <strong>cumque reiciendis</strong> ipsum earum
-            corporis dicta molestias, illo, ut aliquam obcaecati accusamus!
-            Mollitia nesciunt assumenda nulla est dolor ipsa?
-          </p>
-          <p class="about__desc">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Perspiciatis <a href="">consequuntur minima</a> qui dolorum
-            inventore labore eligendi illo? Dolorum nobis similique ea
-            dignissimos magni maiores, soluta suscipit aut laudantium quaerat
-            doloribus.
-          </p>
-          <hr class="about__hr" />
-          <h3 class="about__subtitle">Domains</h3>
-          <div id="cards">
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
-                </div>
-                <div class="card-info-wrapper">
-                  <div class="card-info">
-                    <div class="card-info-title">
-                      <h3>Apartments</h3>  
-                      <h4>Places to be apart. Wait, what?</h4>
-                    </div>    
+    <!-- about section starts here -->
+    <section class="container about section">
+      <div class="about__content">
+        <h2 class="about__title">About</h2>
+        <p class="about__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
+          dolorum sint <strong>asperiores velit</strong>! Ut nesciunt soluta,
+          similique doloremque ab aliquam asperiores officiis exercitationem
+          aut consectetur impedit cupiditate dicta, neque suscipit.
+        </p>
+        <p class="about__desc">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          tempore rerum, <strong>cumque reiciendis</strong> ipsum earum
+          corporis dicta molestias, illo, ut aliquam obcaecati accusamus!
+          Mollitia nesciunt assumenda nulla est dolor ipsa?
+        </p>
+        <p class="about__desc">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          Perspiciatis <a href="">consequuntur minima</a> qui dolorum
+          inventore labore eligendi illo? Dolorum nobis similique ea
+          dignissimos magni maiores, soluta suscipit aut laudantium quaerat
+          doloribus.
+        </p>
+        <hr class="about__hr" />
+        <h3 class="about__subtitle">Domains</h3>
+        <div id="cards">
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
+                  <div class="card-info-title">
+                    <h3>Apartments</h3>
+                    <h4>Places to be apart. Wait, what?</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="fa-duotone fa-unicorn"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
                   <i class="fa-duotone fa-unicorn"></i>
-                </div>
-                <div class="card-info-wrapper">
-                  <div class="card-info">
-                    <i class="fa-duotone fa-unicorn"></i>
-                    <div class="card-info-title">
-                      <h3>Unicorns</h3>  
-                      <h4>A single corn. Er, I mean horn.</h4>
-                    </div>    
-                  </div>  
+                  <div class="card-info-title">
+                    <h3>Unicorns</h3>
+                    <h4>A single corn. Er, I mean horn.</h4>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="fa-duotone fa-blender-phone"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
                   <i class="fa-duotone fa-blender-phone"></i>
-                </div>
-                <div class="card-info-wrapper">
-                  <div class="card-info">
-                    <i class="fa-duotone fa-blender-phone"></i>
-                    <div class="card-info-title">
-                      <h3>Blender Phones</h3>  
-                      <h4>These absolutely deserve to exist.</h4>
-                    </div>    
+                  <div class="card-info-title">
+                    <h3>Blender Phones</h3>
+                    <h4>These absolutely deserve to exist.</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="fa-duotone fa-person-to-portal"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
                   <i class="fa-duotone fa-person-to-portal"></i>
-                </div>
-                <div class="card-info-wrapper">
-                  <div class="card-info">
-                    <i class="fa-duotone fa-person-to-portal"></i>
-                    <div class="card-info-title">
-                      <h3>Adios</h3>  
-                      <h4>See you...</h4>
-                    </div>    
+                  <div class="card-info-title">
+                    <h3>Adios</h3>
+                    <h4>See you...</h4>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="card-content">
-                <div class="card-image">
+          </div>
+          <div class="card">
+            <div class="card-content">
+              <div class="card-image">
+                <i class="fa-duotone fa-person-from-portal"></i>
+              </div>
+              <div class="card-info-wrapper">
+                <div class="card-info">
                   <i class="fa-duotone fa-person-from-portal"></i>
-                </div>
-                <div class="card-info-wrapper">
-                  <div class="card-info">
-                    <i class="fa-duotone fa-person-from-portal"></i>
-                    <div class="card-info-title">
-                      <h3>I mean hello</h3>  
-                      <h4>...over here.</h4>
-                    </div>    
+                  <div class="card-info-title">
+                    <h3>I mean hello</h3>
+                    <h4>...over here.</h4>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          
-        </div>
-        <!-- <div class="about__image-wrapper">
-          <img class="about__img" src="/duck.jpg" alt="windows" />
-        </div> -->
-      </section>
-
-      <section id="timeline">
-        <div class="tl-item">
-          <div
-            class="tl-bg"
-            style="background-image: url(./public/img/Frame1.png)"
-          ></div>
-
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Phase 1</p>
-          </div>
-
-          <div class="tl-content">
-            <h1>Lorem ipsum dolor sit</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit.
-            </p>
-          </div>
         </div>
 
-        <div class="tl-item">
-          <div
-            class="tl-bg"
-            style="background-image: url(./public/img/Frame1.png)"
-          ></div>
+      </div>
+      <!-- <div class="about__image-wrapper">
+        <img class="about__img" src="/duck.jpg" alt="windows" />
+      </div> -->
+    </section>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Phase 2</p>
-          </div>
+    <section id="timeline">
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(./public/img/Frame1.png)"></div>
 
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
-            <p>
-              Suspendisse potenti. Sed sollicitudin eros lorem, eget accumsan
-              risus dictum id. Maecenas dignissim ipsum vel mi rutrum egestas.
-              Donec mauris nibh, facilisis ut hendrerit vel, fringilla sed
-              felis. Morbi sed nisl et arcu.
-            </p>
-          </div>
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">Phase 1</p>
         </div>
 
-        <div class="tl-item">
-          <div
-            class="tl-bg"
-            style="background-image: url(./public/img/Frame1.png)"
-          ></div>
+        <div class="tl-content">
+          <h1>Lorem ipsum dolor sit</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+            reprehenderit in voluptate velit.
+          </p>
+        </div>
+      </div>
 
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Phase 3</p>
-          </div>
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(./public/img/Frame1.png)"></div>
 
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
-            <p>
-              Mauris cursus magna at libero lobortis tempor. Suspendisse
-              potenti. Aliquam interdum vulputate neque sit amet varius.
-              Maecenas ac pulvinar nisi. Fusce vitae nunc ultrices, tristique
-              dolor at, porttitor dolor. Etiam id cursus arcu, in dapibus nibh.
-              Pellentesque non porta leo. Nulla eros odio, egestas quis
-              efficitur vel, pretium sed.
-            </p>
-          </div>
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">Phase 2</p>
         </div>
 
-        <div class="tl-item">
-          <div
-            class="tl-bg"
-            style="background-image: url(./public/img/Frame1.png)"
-          ></div>
-
-          <div class="tl-year">
-            <p class="f2 heading--sanSerif">Phase 4</p>
-          </div>
-
-          <div class="tl-content">
-            <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
-            <p>
-              Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare
-              purus non euismod. Donec vestibulum efficitur tortor, eget
-              efficitur enim facilisis consequat. Vivamus laoreet laoreet elit.
-              Ut ut varius metus, bibendum imperdiet ex. Curabitur diam quam,
-              blandit at risus nec, pulvinar porttitor lorem. Pellentesque dolor
-              elit.
-            </p>
-          </div>
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Vestibulum laoreet lorem</h1>
+          <p>
+            Suspendisse potenti. Sed sollicitudin eros lorem, eget accumsan
+            risus dictum id. Maecenas dignissim ipsum vel mi rutrum egestas.
+            Donec mauris nibh, facilisis ut hendrerit vel, fringilla sed
+            felis. Morbi sed nisl et arcu.
+          </p>
         </div>
-      </section>
+      </div>
 
-      <section class="section section-default mt-none mb-none">
-        <p class="hero__subtitle sponsor__title">
-          <span class="magic__desc">Our Sponsors</span>
-        </p>
-        <div class="container">
-          <strong>
-            <div class="row">
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Devfolio.jpeg" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Filecoin.png" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Polygon.png" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Replit.jpg" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Solana.png" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Solana.png" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Solana.png" />
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-4 col-lg-3">
-                <div class="square-holder">
-                  <img alt="" src="/partners/Solana.png" />
-                </div>
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(./public/img/Frame1.png)"></div>
+
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">Phase 3</p>
+        </div>
+
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Phasellus mauris elit</h1>
+          <p>
+            Mauris cursus magna at libero lobortis tempor. Suspendisse
+            potenti. Aliquam interdum vulputate neque sit amet varius.
+            Maecenas ac pulvinar nisi. Fusce vitae nunc ultrices, tristique
+            dolor at, porttitor dolor. Etiam id cursus arcu, in dapibus nibh.
+            Pellentesque non porta leo. Nulla eros odio, egestas quis
+            efficitur vel, pretium sed.
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-bg" style="background-image: url(./public/img/Frame1.png)"></div>
+
+        <div class="tl-year">
+          <p class="f2 heading--sanSerif">Phase 4</p>
+        </div>
+
+        <div class="tl-content">
+          <h1 class="f3 text--accent ttu">Mauris vitae nunc elem</h1>
+          <p>
+            Suspendisse ac mi at dolor sodales faucibus. Nunc sagittis ornare
+            purus non euismod. Donec vestibulum efficitur tortor, eget
+            efficitur enim facilisis consequat. Vivamus laoreet laoreet elit.
+            Ut ut varius metus, bibendum imperdiet ex. Curabitur diam quam,
+            blandit at risus nec, pulvinar porttitor lorem. Pellentesque dolor
+            elit.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-default mt-none mb-none">
+      <p class="hero__subtitle sponsor__title">
+        <span class="magic__desc">Our Sponsors</span>
+      </p>
+      <div class="container">
+        <strong>
+          <div class="row">
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Devfolio.jpeg" />
               </div>
             </div>
-          </strong>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Filecoin.png" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Polygon.png" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Replit.jpg" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Solana.png" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Solana.png" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Solana.png" />
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3">
+              <div class="square-holder">
+                <img alt="" src="/partners/Solana.png" />
+              </div>
+            </div>
+          </div>
+        </strong>
+      </div>
+    </section>
+
+    <section class="faq">
+      <h1 class="magic__desc heading1">Frequently Asked Questions</h1>
+      <div class="faq-container">
+        <div class="faq">
+          <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
+          <p class="faq-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+            nobis, repellat neque non dicta fugiat veritatis sit delectus
+            perspiciatis quis?
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
         </div>
-      </section>
 
-      <section class="faq">
-        <h1 class="magic__desc heading1">Frequently Asked Questions</h1>
-        <div>
-          <dl class="mt-8 mx-auto max-w-screen-sm lg:max-w-screen-lg flex flex-col lg:flex-row lg:flex-wrap">
-            <div class="lg:w-1/2">
-                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
-                    <dt class="question">
-                        <div class="flex justify-between">
-                            <div class="text-indigo-800 font-semibold">
-                            Do you accept Paypal?
-                            </div>
-                            <div>
-                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </dt>
-                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
-                        Yes, we do, along with AliPay, PayTM, and Payoneer.
-                    </dd>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
-                    <dt class="question">
-                        <div class="flex justify-between">
-                            <div class="text-indigo-800 font-semibold">
-                                What is your SLA Guarantee ?
-                            </div>
-                            <div>
-                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </dt>
-                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
-                        Yes, we do, along with AliPay, PayTM, and Payoneer.
-                    </dd>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
-                    <dt class="question">
-                        <div class="flex justify-between">
-                            <div class="text-indigo-800 font-semibold">
-                                Are there more Tailwind templates ?
-                            </div>
-                            <div>
-                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </dt>
-                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
-                        Yes, we do, along with AliPay, PayTM, and Payoneer.
-                    </dd>
-                </div>
-            </div>
-            <div class="lg:w-1/2">
-                <div class="question-and-answer select-none cursor-pointer border-2 mx-8 my-3 px-6 py-4 rounded-lg text-sm group">
-                    <dt class="question">
-                        <div class="flex justify-between">
-                            <div class="text-indigo-800 font-semibold">
-                                Is this template free for commercial use ?
-                            </div>
-                            <div>
-                                <svg fill=currentColor class="question-chevron group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="9.29289322 12.9497475 10 13.6568542 15.6568542 8 14.2426407 6.58578644 10 10.8284271 5.75735931 6.58578644 4.34314575 8"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                                <svg fill=currentColor class="question-chevron hidden group-hover:bg-gray-500 h-5 block text-indigo-800 bg-gray-400 rounded-full p-1" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <g stroke="currentColor" stroke-width="1" fill=currentColor fill-rule="evenodd">
-                                    <g>
-                                    <polygon points="10.7071068 7.05025253 10 6.34314575 4.34314575 12 5.75735931 13.4142136 10 9.17157288 14.2426407 13.4142136 15.6568542 12"></polygon>
-                                    </g>
-                                    </g>
-                                </svg>
-                            </div>
-                        </div>
-                    </dt>
-                    <dd class="answer hidden mt-2 leading-snug text-gray-700">
-                        Yes, we do, along with AliPay, PayTM, and Payoneer.
-                    </dd>
-                </div>
-            </div>
-        </dl>
-    </div>
-</div>
-</div>
-<script
-src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
-crossorigin="anonymous"></script>
-</div>
-      </section>
+        <div class="faq active">
+          <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
+          <p class="faq-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+            nobis, repellat neque non dicta fugiat veritatis sit delectus
+            perspiciatis quis?
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
 
-      <section id="contact" class="contact container section">
-        <h2 class="contact__title">Get In Contact</h2>
-        <p class="contact__description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugiat
-          nobis! Itaque temporibus quam repudiandae vel saepe. Corrupti vitae
-          illum dolorum dignissimos necessitatibus, enim dolor, modi voluptates
-          numquam quo quasi!
-        </p>
-        <a
-          class="contact__btn btn"
-          href="mailto:slayingthedragon.io@gmail.com"
-          target="_blank"
-          >React Out</a
-        >
-      </section>
-    </main>
-    <footer class="footer container section">
-      <h3 class="footer__title">Made with 💖</h3>
-      <h3 class="footer__title"><span class="magic">~by Snehil Shah~</span></h3>
-      <h3 class="footer__title">Special Thanks</h3>
-      <h3 class="footer__title"><span class="magic">~Rummaan Ahmad~</span></h3>
-    </footer>
-    <script type="module" src="./src/main.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="./script.js"></script>
-  </body>
+        <div class="faq">
+          <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
+          <p class="faq-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+            nobis, repellat neque non dicta fugiat veritatis sit delectus
+            perspiciatis quis?
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
+          <p class="faq-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+            nobis, repellat neque non dicta fugiat veritatis sit delectus
+            perspiciatis quis?
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+
+        <div class="faq">
+          <h3 class="faq-title">Lorem ipsum dolor sit amet.</h3>
+          <p class="faq-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod
+            nobis, repellat neque non dicta fugiat veritatis sit delectus
+            perspiciatis quis?
+          </p>
+          <button class="faq-toggle">
+            <i class="fas fa-angle-down"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container section">
+      <h2 class="contact__title">Get In Contact</h2>
+      <p class="contact__description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, fugiat
+        nobis! Itaque temporibus quam repudiandae vel saepe. Corrupti vitae
+        illum dolorum dignissimos necessitatibus, enim dolor, modi voluptates
+        numquam quo quasi!
+      </p>
+      <a class="contact__btn btn" href="mailto:slayingthedragon.io@gmail.com" target="_blank">React Out</a>
+    </section>
+  </main>
+  <footer class="footer container section">
+    <h3 class="footer__title">Made with 💖</h3>
+    <h3 class="footer__title"><span class="magic">~by Snehil Shah~</span></h3>
+    <h3 class="footer__title">Special Thanks</h3>
+    <h3 class="footer__title"><span class="magic">~Rummaan Ahmad~</span></h3>
+  </footer>
+  <script type="module" src="./src/main.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="./script.js"></script>
+</body>
+
 </html>
